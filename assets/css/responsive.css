@@ -13,6 +13,10 @@
     padding: 15px;
     font-size: 15px;
   }
+  .form-submit {
+    appearance: none;
+    -webkit-appearance: none;
+  }
   #footer .socials a {
     font-size: 34px;
     margin: 0 8px;
