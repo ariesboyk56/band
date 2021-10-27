@@ -1,0 +1,27 @@
+
+/* Responsion */
+/* Mobile and tablet  width < 1023px  */
+@media screen and (max-width: 63.9375em) {
+  
+}
+
+/* mobile width < 739px */
+@media screen and (max-width: 46.1875em) {
+  #nav > li {
+    display: block;
+  }
+  .header__search {
+    display: none;
+  }
+  .header__menu-mobile {
+    display: block;
+  }
+}
+
+
+/* tablet 740px =< width < 1023px */
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  
+}
+
+/* pc width > 1024px */
