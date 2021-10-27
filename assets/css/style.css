@@ -1,0 +1,423 @@
+/* Reset Css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.icon-size-14 {
+  font-size: 14px;
+}
+.mt8 {
+  margin-top: 8px;
+}
+.mt16 {
+  margin-top: 16px;
+}
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.col {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.col-full {
+  width: 100%;
+}
+.col-3 {
+  width: 33.33333%;
+}
+.col-2 {
+  width: 50%;
+}
+
+
+#main {
+}
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-between;
+  height: 46px;
+  background-color: #000000;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+#nav, .subnav {
+  list-style: none;
+}
+#nav>li {
+  display: inline-block;
+  position: relative;
+}
+#nav>li>a {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+#nav li:hover .subnav {
+  display: block;
+}
+#nav li a {
+  text-decoration: none;
+  line-height: 46px;
+  height: 46px;
+  padding: 0 24px;
+  display: inline-block;
+}
+#nav .subnav li:hover a,
+#nav>li:hover>a{
+  color: #000000;
+  background-color: #CCCCCC;
+}
+#nav .subnav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background-color:#ffffff;
+  box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%),
+             0 4px 20px 0 rgb(0 0 0 / 19%);
+  display: none;
+}
+#nav .subnav a{
+  display: block;
+  color: #000000;
+  padding: 0 16px;
+}
+.header__search:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+.header__search-icon {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 46px;
+  padding: 0 24px;
+}
+
+#slider {
+  position: relative;
+  margin-top: 46px;
+  padding-top: 50%;
+  background: url('/assets/img/slider/chicago.jpg') top center / cover no-repeat;
+}
+.slider__content {
+  position: absolute;
+  bottom: 48px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+.slider__content-heading {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+}
+.slider__content-description {
+  margin-top: 25px;
+  font-size: 15px;
+}
+/* Content */
+#content {
+
+}
+.content-section {
+  width: 800px;
+  margin: auto;
+  padding: 64px 16px 112px;
+  text-align: center;
+}
+.section-heading {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+.section-sub-heading {
+  font-size: 15px;
+  margin-top: 25px;
+  font-style: italic;
+  opacity: .6;
+}
+/* About Section */
+.about-content {
+  font-size: 15px;
+  margin-top: 25px;
+  text-align: justify;
+  line-height: 1.4;
+}
+.member-list {
+  display: flex;
+  justify-content: space-around;
+  padding:  64px 0 0 0;
+}
+.member-name {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.member-avatar {
+  width: 150px;
+  border-radius: 4px;
+}
+/* Tour section */
+.tour-section {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.tickeds-list {
+  background-color: #FFFFFF;
+  color: #757575;
+  margin-top: 42px;
+  list-style: none;
+}
+.tickeds-list li {
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  padding: 11px 16px;
+  text-align: left;
+}
+.sold-out {
+  color: #fff;
+  background-color: #f44336;
+  margin-left: 16px;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.quantity {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 50%;
+  margin-top: -3px;
+  float: right;
+}
+.place-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+.place-avatar {
+  display: block;
+  width: 100%;
+}
+.place-avatar:hover {
+  opacity: .6;
+}
+.place-body {
+  font-size: 15px;
+  padding: 16px;
+  color: #000000;
+  background-color: #FFFFFF;
+  text-align: left;
+}
+.place-name {
+  font-size: 15px;
+  font-weight: 600;
+}
+.place-time {
+  margin-top: 15px;
+  color: #757575;
+}
+.place-desc {
+  margin-top: 15px;
+  line-height: 1.4;
+}
+.place-buy-btn {
+  display: block;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #000000;
+  text-align: center;
+  width: 108px;
+  height: 38px;
+  line-height: 38px;
+  margin-top: 15px;
+}
+.place-buy-btn:hover,
+ .form-submit:hover {
+  text-decoration: none;
+  color: #000;
+  background-color: #ccc;
+}
+/* Map section */
+.map-section img {
+  width: 100%;
+}
+
+#footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+#footer .socials a{
+  font-size: 22px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, .6);
+}
+#footer .socials a:hover{
+  color: rgba(0, 0, 0, .4);
+}
+#footer .copyright {
+  font-size: 15px;
+  margin: 15px 0;
+  color: rgba(0, 0, 0, .6);
+}
+#footer .copyright a{
+  color: rgba(0, 0, 0, .6);
+}
+
+/* Modal */
+.modal.open {
+  display: flex;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .5);
+}
+.modal-container {
+  position: relative;
+  background-color: #FFFFFF;
+  width: 900px;
+  min-height: 300px;
+  animation: modalFadeIn ease .4s;
+}
+.modal-heading {
+  height: 130px;
+  color: #fff;
+  background-color: #009688;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.modal-heading i {
+  margin-right: 16px;
+}
+.modal-close {
+  position: absolute;
+  right: 0;
+  top: 0; 
+  color: #ffffff;
+  background-color: #009688;
+  padding: 12px;
+  cursor: pointer;
+}
+.modal-close:hover, #buy-tickeds:hover {
+  opacity: .6;
+}
+.modal-body {
+  padding: 16px;
+}
+.modal-label {
+  font-size: 15px;
+  display: block;
+  margin-bottom: 12px;
+}
+.modal-input {
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+  margin-bottom: 24px;
+  border: 1px solid #ccc;
+}
+#buy-tickeds {
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #009688;
+  font-size: 15px;
+  padding: 18px;
+  width: 100%;
+  cursor: pointer;
+}
+.modal-footer {
+  padding: 16px;
+  float: right;
+}
+.modal-footer a {
+  color: #2196F3;
+}
+/* COntact */
+.contact-content {
+  margin-top: 48px;
+  display: flex;
+}
+.contact-info {
+  font-size: 18px;
+  text-align: left;
+  line-height: 1.4;
+}
+.contact-info i[class*="ti-"]{
+  width: 30px;
+  display: inline-block;
+}
+.contact-form {
+  font-size: 15px;
+}
+.contact-form .row{
+  display: flex;
+}
+.contact-form .form-control{
+  padding: 12px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.form-submit {
+  display: block;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #000000;
+  text-align: center;
+  padding: 8px 16px;
+  float: right;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Responsion */
+/* Mobile and tablet  width < 1023px  */
+@media screen and (max-width: 63.9375em) {
+  
+}
+
+/* mobile width < 739px */
+@media screen and (max-width: 46.1875em) {
+  
+}
+
+/* tablet 740px =< width < 1023px */
+@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  
+}
+
+/* pc width > 1024px */
