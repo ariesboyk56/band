@@ -17,6 +17,9 @@ html {
 .mt16 {
   margin-top: 16px;
 }
+.mt28 {
+  margin-top: 28px;
+}
 .row {
   margin-left: -8px;
   margin-right: -8px;
@@ -37,7 +40,7 @@ html {
 
 
 #main {
-  max-width: 100%;
+  /* overflow: hidden; */
 }
 /* Header */
 #header {
@@ -50,7 +53,6 @@ html {
   top: 0;
   right: 0;
   left: 0;
-  overflow: hidden;
 }
 #nav, .subnav {
   list-style: none;
@@ -73,10 +75,16 @@ html {
   padding: 0 24px;
   display: inline-block;
 }
+
+
+.header__menu-mobile:hover,
 #nav .subnav li:hover a,
 #nav>li:hover>a{
   color: #000000;
   background-color: #CCCCCC;
+}
+.header__menu-mobile:hover i{
+  color: #000000;
 }
 #nav .subnav {
   position: absolute;
@@ -95,18 +103,22 @@ html {
 }
 .header__menu-mobile {
   display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .header__search:hover {
   background-color: #f44336;
   cursor: pointer;
 }
-.header__search-icon {
+.header__search-icon,
+.header__menu-icon {
   font-size: 14px;
   color: #ffffff;
   line-height: 46px;
   padding: 0 24px;
+  
 }
-
 #slider {
   position: relative;
   margin-top: 46px;
@@ -159,7 +171,7 @@ html {
 .member-list {
   display: flex;
   justify-content: space-around;
-  padding:  64px 0 0 0;
+  padding:  36px 0 0 0;
 }
 .member-name {
   font-size: 15px;
@@ -208,7 +220,6 @@ html {
 .place-list {
   display: flex;
   justify-content: space-around;
-  margin-top: 32px;
   margin-bottom: 0;
 }
 
@@ -300,7 +311,8 @@ html {
 .modal-container {
   position: relative;
   background-color: #FFFFFF;
-  width: 900px;
+  width: 90%;
+  max-width: 900px;
   min-height: 300px;
   animation: modalFadeIn ease .4s;
 }

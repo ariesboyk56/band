@@ -19,7 +19,7 @@
         <li><a href="#tour">Tour</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
-          <a href="">
+          <a href="#">
             More
             <i class="ti-angle-down icon-size-14"></i>
           </a>
@@ -33,9 +33,9 @@
       <div class="header__search">
         <i class="ti-search header__search-icon"></i>
       </div>
-      <!-- <div class="header__menu-mobile">
-        <i class="ti-menu header__search-icon"></i>
-      </div> -->
+      <div class="header__menu-mobile">
+        <i class="ti-menu header__menu-icon"></i>
+      </div>
     </div>
     <div id="slider">
       <div class="slider__content">
@@ -53,15 +53,15 @@
           We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
         <div class="member-list row">
-          <div class="col-3 col">
+          <div class="mb-col-full mt28 col-3 col">
             <p class="member-name">Name</p>
             <img src="./assets/img/band/bandmember.jpg" alt="Name" class="member-avatar">
           </div>
-          <div class="col-3 col">
+          <div class="mb-col-full mt28 col-3 col">
             <p class="member-name">Name</p>
             <img src="./assets/img/band/bandmember.jpg" alt="Name" class="member-avatar">
           </div>
-          <div class="col-3 col">
+          <div class="mb-col-full mt28 col-3 col">
             <p class="member-name">Name</p>
             <img src="./assets/img/band/bandmember.jpg" alt="Name" class="member-avatar">
           </div>
@@ -79,32 +79,32 @@
             <li>October <span class="sold-out">Sold out</span> </li>
             <li>November <span class="quantity">3</span> </li>
           </ul>
-          <div class="place-list row">
-            <div class="col-3 col">
+          <div class="place-list mt16 row">
+            <div class="col-3 col mb-col-full mt16">
               <img src="./assets/img/tour/newyork.jpg" alt="New York" class="place-avatar">
               <div class="place-body">
                 <h3 class="place-name">New York</h3>
                 <p class="place-time">Fri 27 Nov 2016</p>
                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                <button class="place-buy-btn js-buy-ticked">Buy Tickeds</button>
+                <button class="place-buy-btn mb-size-full js-buy-ticked">Buy Tickeds</button>
               </div>
             </div>
-            <div class="col-3 col">
+            <div class="col-3 col mb-col-full mt16">
               <img src="./assets/img/tour/paris.jpg" alt="Paris" class="place-avatar">
               <div class="place-body">
                 <h3 class="place-name">Paris</h3>
                 <p class="place-time">Sat 28 Nov 2016</p>
                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                <button class="place-buy-btn js-buy-ticked">Buy Tickeds</button>
+                <button class="place-buy-btn mb-size-full js-buy-ticked">Buy Tickeds</button>
               </div>
             </div>
-            <div class="col-3 col">
+            <div class="col-3 col mb-col-full mt16">
               <img src="./assets/img/tour/sanfran.jpg" alt="San Francisco" class="place-avatar">
               <div class="place-body">
                 <h3 class="place-name">San Francisco</h3>
                 <p class="place-time">Sun 29 Nov 2016</p>
                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                <button class="place-buy-btn js-buy-ticked">Buy Tickeds</button>
+                <button class="place-buy-btn mb-size-full js-buy-ticked">Buy Tickeds</button>
               </div>
             </div>
           </div>
@@ -117,19 +117,19 @@
         <p class="section-sub-heading">Fan? Drop a note!</p>
 
         <div class="row contact-content">
-          <div class="col col-2 contact-info">
+          <div class="col col-2 mb-col-full contact-info">
             <div><i class="ti-location-pin"></i>Chicago, US</div>
             <div><i class="ti-mobile"></i>Phone: +00 151515</div>
             <div><i class="ti-email"></i>Email: mail@mail.com</div>
           </div>
 
-          <div class="col col-2 contact-form">
+          <div class="col col-2 mb-col-full contact-form">
             <form action="">
               <div class="row ">
-                <div class="col col-2">
+                <div class="col col-2 mb-col-full mb-mt16">
                   <input required type="text" class="form-control" placeholder="Name">
                 </div>
-                <div class="col col-2">
+                <div class="col col-2 mb-col-full mb-mt8">
                   <input required type="email" class="form-control" placeholder="Email">
                 </div>
               </div>
@@ -139,7 +139,7 @@
                   <input required type="text" class="form-control" placeholder="Massage">
                 </div>
               </div>
-              <input class="mt16 form-submit" type="submit" value="SEND">
+              <input class="mt16 form-submit mb-size-full" type="submit" value="SEND">
             </form>
           </div>
         </div>
@@ -197,6 +197,10 @@
     const closeModal = document.querySelector('.js-close-modal');
     const modalContainer = document.querySelector('.modal-container');
     const modal = document.querySelector('.modal');
+    const header = document.querySelector('#header');
+    const headerMenu = document.querySelector('.header__menu-mobile')
+    const currentHeightMenu = header.clientHeight;
+    const menuItems = document.querySelectorAll('#nav li a[href*="#"]')
 
     function showBuyTicked() {
       modal.classList.add('open')
@@ -212,6 +216,38 @@
     modalContainer.addEventListener('click', (event)=>{
       event.stopPropagation()
     })
+    // headerMenu.onClick = function(){
+    //   alert('dasdsa');
+    //   var isClose = header.clientHeight === 46;
+    //   if (isClose) {
+    //     header.style.height = 'auto'
+    //   } else {
+    //     header.style.height = '46px'
+    //   }
+    // }
+    // close - open mobile menu
+    headerMenu.addEventListener('click', ()=>{
+      var isClose = header.clientHeight === currentHeightMenu;
+      if (isClose) {
+        header.style.height = 'auto'
+      } else {
+        header.style.height = null
+      }
+    })
+
+    // Close mobile menu on click
+    for (var i = 0; i < menuItems.length; i++){
+      var menuItem = menuItems[i];
+      menuItem.onclick = function(event){
+        var isSub = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+        if (isSub) {
+          event.preventDefault();
+        } else {
+          header.style.height = null
+        }
+      }
+    }
+
   </script>
 </body>
 </html>
